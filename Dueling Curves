@@ -1,0 +1,18 @@
+
+import numpy as np
+import  pandas as pd
+import matplotlib.pyplot as plt
+import random as rd
+import pandas as pd
+
+
+def dueling_curves(max_degree):
+    x = np.linspace(0,1,100)
+    with plt.style.context('dark_background'):
+        for i in range(1,max_degree):
+            plt.plot(x,x**i)
+            plt.plot(x,x**(1/i))
+    out = plt.axis('off')
+    return out
+
+
